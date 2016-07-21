@@ -1,0 +1,58 @@
+#layout 2monitors 'Mail':MAIN_FIRST                             ${2-left}
+#layout 2monitors 'Path Finder':MAIN_FIRST                      ${2-righttop}
+#layout 2monitors 'Xcode':REPEAT                                ${1-full}
+#layout 2monitors 'Eclipse':REPEAT                              ${1-full}
+
+# 1 Monitor layout
+#layout 1monitor 'iTerm':MAIN_FIRST                             ${1-right}
+#layout 1monitor 'Sublime Text 2':MAIN_FIRST                    ${1-left}
+#layout 1monitor 'Nightly':REPEAT                               ${1-full}
+#layout 1monitor 'Mail':MAIN_FIRST                              ${1-full}
+#layout 1monitor 'Xcode':REPEAT                                 ${1-full}
+#layout 1monitor 'Eclipse':REPEAT                               ${1-full}
+#layout 1monitor 'iTunes':REPEAT                                ${1-full}
+
+# Default Layouts
+#default 2monitors resolutions:${mon-laptop}${mon-cinema};
+#default 1monitor  resolutions:${mon-laptop}
+
+
+# ======================================
+# The HYPER key
+# ======================================
+
+alias hyper cmd
+
+#bind d:${hyper}  ${showNormalHint}
+
+# Location bindings
+bind left:${hyper} ${lefthalf}
+bind up:${hyper} ${full}
+bind right:${hyper} ${righthalf}
+bind pad7:${hyper} ${toplefthalf}
+bind pad8:${hyper} ${tophalf}
+bind pad9:${hyper} ${toprighthalf}
+bind pad4:${hyper} ${lefthalf}
+bind pad5:${hyper} ${full}
+bind pad6:${hyper} ${righthalf}
+bind pad1:${hyper} ${bottomlefthalf}
+bind pad2:${hyper} ${bottomhalf}
+bind pad3:${hyper} ${bottomrighthalf}
+bind o:${hyper} throw next
+
+# Resize Bindings
+#bind r:${hyper} ${leftless}
+#bind g:${hyper} ${1-rightlesstop}
+
+# Focus Bindings
+#bind ;:${hyper}     focus right
+#bind h:${hyper}     focus left
+#bind u:${hyper}     focus up
+#bind n:${hyper}     focus down
+#bind ':${hyper}     focus behind
+
+# App bindings
+bind b:${hyper} focus ${browser}
+bind e:${hyper} focus ${editor}
+bind j:${hyper} focus ${intellij}
+bind h:${hyper} focus ${slack}
