@@ -1,21 +1,102 @@
-#layout 2monitors 'Mail':MAIN_FIRST                             ${2-left}
-#layout 2monitors 'Path Finder':MAIN_FIRST                      ${2-righttop}
-#layout 2monitors 'Xcode':REPEAT                                ${1-full}
-#layout 2monitors 'Eclipse':REPEAT                              ${1-full}
+# Configs
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+config secondsBetweenRepeat 0.1
+config checkDefaultsOnLoad true
+config focusCheckWidthMax 3000
+config windowHintsShowIcons true
+config windowHintsIgnoreHiddenWindows false
+#config windowHintsDuration 5
+config windowHintsSpread true
+#config windowHintsOrder persist
+
+# Monitor Aliases
+alias mon-laptop    0
+alias mon-cinema    1
+
+# Misc Aliases
+alias showHintsLeftHand hint AOEUIYQJKX
+alias showNormalHint hint AOEUIDHTNSYXFBPKGMCW
+alias browser 'Google Chrome'
+alias editor 'iTerm2'
+alias intellij 'IntelliJ IDEA'
+alias slack 'Slack'
+alias sublime 'Sublime Text'
+
+# Abstract positions
+alias full          move screenOriginX;screenOriginY                  screenSizeX;screenSizeY
+alias lefthalf      move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY
+alias righthalf     move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY
+
+alias tophalf       move screenOriginX;screenOriginY                  screenSizeX;screenSizeY/2
+alias bottomhalf    move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX;screenSizeY/2
+
+alias toplefthalf   move screenOriginX;screenOriginY                  screenSizeX/2;screenSizeY/2
+alias toprighthalf  move screenOriginX+screenSizeX/2;screenOriginY    screenSizeX/2;screenSizeY/2
+
+alias bottomlefthalf   move screenOriginX;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2
+alias bottomrighthalf  move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2   screenSizeX/2;screenSizeY/2
+
+# Concrete positions
+#alias 2-full        move screenOriginX;screenOriginY screenSizeX;screenSizeY         			${mon-laptop}
+#alias 1-left        move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         			${mon-cinema}
+#alias 1-right       move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY    ${mon-laptop}
+#alias 1-leftmost    move screenOriginX;screenOriginY screenSizeX*0.6;screenSizeY  				${mon-cinema}
+#alias 2-righttop	move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2	${mon-laptop}
+#
+#alias 2-left        		move screenOriginX;screenOriginY screenSizeX/2;screenSizeY         								${mon-laptop}
+#alias 2-right       		move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY        				${mon-laptop}
+#alias 1-rightlesstop   		move screenOriginX+screenSizeX*0.6;screenOriginY screenSizeX*0.4;screenSizeY/2 					${mon-cinema}
+#alias 1-rightlessbottom 	move screenOriginX+screenSizeX*0.6;screenOriginY+screenSizeY/2 screenSizeX*0.4;screenSizeY/2 	${mon-cinema}
+#alias 2-righttopsmall    	move screenOriginX+screenSizeX*.666;screenOriginY screenSizeX/3;screenSizeY/3       			${mon-laptop}
+#alias 2-rightbottomsmall 	move screenOriginX+screenSizeX*.666;screenOriginY screenSizeX/3;screenSizeY/3       			${mon-laptop}
+#alias 1-rightbottom 		move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2    screenSizeX/2;screenSizeY/2     ${mon-cinema}
+#alias 1-smalltopright		move screenOriginX+screenSizeX*0.6;screenOriginY-screenSizeY/2 screenSizeX*0.4;screenSizeY/3  														${mon-cinema}
+#alias 1-largebotright		move screenOriginX+screenSizeX*0.6;screenOriginY+screenSizeY/3 screenSizeX*0.4;2*screenSizeY/3 													${mon-cinema}
+
+# 2 Monitor layout
+#layout 2monitors 'iTerm':MAIN_FIRST                       	${1-largebotright} | ${1-rightlesstop}
+#layout 2monitors 'Sequel Pro':REPEAT 						${1-rightlesstop}
+#layout 2monitors 'Tower':REPEAT								${1-rightlesstop}
+#layout 2monitors ${browser}:REPEAT                          ${2-full}
+#layout 2monitors 'HipChat':REPEAT 							${1-smalltopright}
+#layout 2monitors  ${editor}:REPEAT              			${1-leftmost}
+#layout 2monitors 'MacVim':REPEAT                	  		${1-full}
+#layout 2monitors 'Mail':MAIN_FIRST                        	${2-left}
+#layout 2monitors 'Path Finder':MAIN_FIRST                 	${2-righttop}
+#layout 2monitors 'Xcode':REPEAT                           	${1-full}
+#layout 2monitors 'Eclipse':REPEAT                         	${1-full}
 
 # 1 Monitor layout
-#layout 1monitor 'iTerm':MAIN_FIRST                             ${1-right}
-#layout 1monitor 'Sublime Text 2':MAIN_FIRST                    ${1-left}
-#layout 1monitor 'Nightly':REPEAT                               ${1-full}
-#layout 1monitor 'Mail':MAIN_FIRST                              ${1-full}
-#layout 1monitor 'Xcode':REPEAT                                 ${1-full}
-#layout 1monitor 'Eclipse':REPEAT                               ${1-full}
-#layout 1monitor 'iTunes':REPEAT                                ${1-full}
+#layout 1monitor 'iTerm':MAIN_FIRST                       	${1-right}
+#layout 1monitor 'Sublime Text 2':MAIN_FIRST              	${1-left}
+#layout 1monitor 'Nightly':REPEAT                          	${1-full}
+#layout 1monitor 'Mail':MAIN_FIRST                        	${1-full}
+#layout 1monitor 'Xcode':REPEAT                           	${1-full}
+#layout 1monitor 'Eclipse':REPEAT                         	${1-full}
+#layout 1monitor 'iTunes':REPEAT                          	${1-full}
 
 # Default Layouts
 #default 2monitors resolutions:${mon-laptop}${mon-cinema};
 #default 1monitor  resolutions:${mon-laptop}
 
+# Numpad location Bindings
+#bind pad0 ${showHintsLeftHand}
+#bind pad1 ${leftless}
+#bind pad2 push bottom bar-resize:screenSizeY/2
+#bind pad3 ${rightless}
+#bind pad4 ${lefthalf}
+#bind pad5 ${full}
+#bind pad6 ${righthalf}
+#bind pad7 ${leftmost}
+#bind pad8 push top bar-resize:screenSizeY/2
+#bind pad9 ${rightmost}
+#bind padEnter grid padding:5 ${mon-laptop}:6,2 ${mon-samsung}:8,3
+#bind pad+ throw next
+#bind pad. focus behind
+#bind pad* layout 2monitors
+#bind pad/ layout 1monitor
 
 # ======================================
 # The HYPER key
@@ -56,3 +137,4 @@ bind b:${hyper} focus ${browser}
 bind e:${hyper} focus ${editor}
 bind j:${hyper} focus ${intellij}
 bind h:${hyper} focus ${slack}
+bind g:${hyper} focus ${sublime}
